@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS TO TABLE</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./fevicon.png" type="image" sizes="16x16">
+</head>
+
+<body>
+    <div class="section1">
+        <div id="formdiv">
+            <form>
+                <div>
+                    <label for="firstname" class="star">First Name</label>
+                    <input type="text" id="firstname" required>
+                </div>
+
+                <div>
+                    <label for="lastname" class="star">Last Name</label>
+                    <input type="text" id="lastname" required>
+                </div>
+
+                <div>
+                    <label for="address" class="star">Address</label>
+                    <input type="text" id="address" required>
+                </div>
+
+                <div>
+                    <label for="pin-code" class="star">Pin Code</label>
+                    <input type="text" id="pin-code" required>
+                </div>
+
+                <div>
+                    <label class="block star">Gender</label>
+                    <input type="radio" name="gender" value="Male" id="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" value="Female" id="female">
+                    <label for="female">Female</label>
+                </div>
+
+                <div>
+                    <label class="block star" style="display: inline;">Food</label><span class="small">(Select atleast
+                        two
+                        items)</span>
+                    <br>
+                    <input type="checkbox" id="popcorn" name="food" value="POPCORN" class="food" required>
+                    <label for="popcorn">Popcorn</label>
+                    <br>
+                    <input type="checkbox" id="pizza" name="food" value="PIZZA" required>
+                    <label for="pizza">Pizza</label>
+                    <br>
+                    <input type="checkbox" id="burger" name="food" value="BURGER">
+                    <label for="burger">Burger</label>
+                    <br>
+                    <input type="checkbox" id="cake" name="food" value="CAKE">
+                    <label for="cake">Cake</label>
+                    <br>
+                    <input type="checkbox" id="sandwich" name="food" value="SANDWICH">
+                    <label for="sandwich">Sandwich</label>
+                </div>
+
+                <div>
+                    <label for="state" class="star">State</label>
+                    <input type="text" id="state" required>
+                </div>
+
+                <div>
+                    <label for="country" class="star">Country</label>
+                    <input type="text" id="country" required>
+                </div>
+
+                <div>
+                    <button type="reset">Reset Form</button>
+                    <button type="submit" id="data-submit" onclick="fillgender()">Submit Form</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="section2">
+        <div id="tablediv">
+            <table id="data-table">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>Pin Code</th>
+                    <th>Gender</th>
+                    <th>Food</th>
+                    <th>State</th>
+                    <th>Country</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
