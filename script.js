@@ -13,6 +13,29 @@ const formsubmit=(event)=>{
         }
     }
 
+    // To alert to fill all input fields
+    var inp=document.querySelectorAll("input[type='text']")
+    for (var h=0;h<inp.length;h++){
+            if(inp[h].value===""){
+            alert("Please fill all the fields before submitting.")
+            return false
+        }
+    }
+
+    // To alert user to select gender
+    var female=document.getElementById("female")
+    var male=document.getElementById("male")
+    if (female.checked===false && male.checked===false){
+        alert("Please select one gender option.")
+        return false;
+    }
+
+    // To alert to select atleast two food items
+    if (food.length<2){
+        alert("Please select atleast two food items.")
+        return false
+    }
+
     // create an object and store the values
     var obj={
         "First Name" : document.getElementById("firstname").value,
@@ -32,21 +55,6 @@ const formsubmit=(event)=>{
     // Create an array of object keys
     let arr=Object.keys(obj)
     // console.log(arr)
-    
-    // To alert to select atleast two food items
-    if (food.length<2){
-        alert("Please select atleast two food items.")
-        return false
-    }
-
-    // To alert to fill all input fields
-    var inp=document.querySelectorAll("input[type='text']")
-    for (var h=0;h<inp.length;h++){
-            if(inp[h].value===""){
-            alert("Please fill all the fields before submitting.")
-            return false
-        }
-    }
 
     // For adding data to table
 
@@ -70,16 +78,3 @@ const formsubmit=(event)=>{
 }
 const btn=document.getElementById("data-submit")
 btn.addEventListener("click",formsubmit)
-
-// To alert user to select gender
-
-function fillgender(){
-    var female=document.getElementById("female")
-    var male=document.getElementById("male")
-    if (female.checked===false && male.checked===false){
-        alert("Please select one gender option.")
-        return false
-    }else{
-        return true
-    }
-}
