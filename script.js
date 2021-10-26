@@ -73,7 +73,7 @@ const formsubmit=(event)=>{
 
     // to store to local storage
     for (var t=0;t<arr.length;t++){
-        localStorage.obj[arr[t]];
+        localStorage.setItem(arr[t],obj[arr[t]]);
     }
 }
 const btn=document.getElementById("data-submit")
